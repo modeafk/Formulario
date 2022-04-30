@@ -1,0 +1,16 @@
+{% extends "layout.html"%}
+
+{% block heading %}
+in senssion:
+{%endblock%}
+
+{% block body%}
+
+<ul>
+    {%for name in nombres%}
+    <li>{{name}} </li>
+    {%endfor%}
+</ul>
+
+{%endblock%}
+

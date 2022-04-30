@@ -1,0 +1,62 @@
+{% extends "layout.html"%}
+
+{% block heading %}
+Formulario
+{%endblock%}
+{% block body%}
+
+<form action="{{ url_for('login') }}" method="post" >
+    <div class="all">
+    <label for="nombre">Nombres</label>
+    <br>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" class="box">
+    <br>
+    <label for="apellido">Apellidos</label>
+    <br>
+        <input type="text" id="apellido" name="apellido" placeholder="Apellido" class="box">
+    <br>
+        <label for="cumple">Fecha de cumpleaños</label>
+    <br>
+    <input type="date" id="cumple" name="cumple" placeholder="1"  class="box">
+    
+        <label for="email">email </label>
+    <br>
+    <input type="email" id="email" name="email" placeholder="Ingrese un email" class="box">
+    <br>
+        <label for="contacto"> Numero de Contacto</label>
+    <br>
+    <input type="text" id="contacto" name="numero" placeholder="Ingrese un numero de telefono" pattern=".{9,}" required title="minimo 9 caracteres" maxlength="9" class="box">
+    <br>
+        <label for="pais"> Pais</label>
+        <select name="pais" class="box">
+            <option value="Argentina">Argentina</option>
+            <option value="España">España</option>
+            <option value="México">México</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Honduras">Honduras</option>
+            <option value="El Salvador">El Salvador</option>
+            <option value="Venezuela">Venezuela</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Cuba">Cuba</option>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Perú">Perú</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="Paraguay">Paraguay</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Chile">Chile</option>
+          </select>
+    <br>
+        <label for="nombre">Sexo</label>
+    <br>
+    <input type="radio" name="sexo"  class="rare" value="Masculino">
+        <label for="nombre" id="extra">Masculino </label>
+    <br>
+    <input type="radio" name="sexo" class="rare"  value="Femenino">
+        <label for="nombre" id="extra">Femenino </label>
+    <br>
+    <button>Submit</button>
+    </div>
+
+</form>
+{%endblock%}
+
